@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 65px;
+    background: linear-gradient(to bottom right, rgba(216, 216, 216, 0.611), gray, #384548);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+
+}
+
+footer {
+    height: 65px;
+    background: linear-gradient(to bottom left, rgba(216, 216, 216, 0.611), gray, #384548);
+    clear: both;
+}
+
+.navlogo {
+    width: 70px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.navref {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.navref a {
+    text-decoration: none;
+    color: #f2dfe4;
+    padding: 25px;
+    /* margin-right: 50px; */
+    font-size: 20px;
+
+    
+    
+}
+
+.bannerIMG {
+    background: url('../resources/banner.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 600px;
+
+}
+
+.CopyRight {
+    display: flex;
+    justify-content: space-between;
+
+    color: #f1d7dd;
+
+}
+
+.products {
+    width: 30%;
+    height: 300px;
+    border: 2px solid gray;
+    border-radius: 5px; /*rotunjirea colturilor */
+    position: relative;
+    float: left;
+    margin: 1%;
+    background: linear-gradient(to bottom right, rgba(197, 197, 197, 0.611), #384548);
+    box-sizing: border-box; /* sa se adapteze in box */
+    overflow: auto; /*bara de defilare apare */
+    box-shadow: 5px 5px 5px gray; /* primul px in dreapta al doilea px in jos al treilea px transparenta umbrei */
+    vertical-align: auto;
+}
+
+.products p {
+    font-size: 17px;
+}
+
+.GIcons {  
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+
+.GIcons img {
+    width: 90px;
+    height: 100%;
+    /* border-radius: 50%; */
+}
+
+.Intro {
+    margin: 2%;
+}
+
+.Intro span {
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.welcome {
+    text-align: center;
+}
