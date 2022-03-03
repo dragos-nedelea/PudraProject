@@ -18,6 +18,11 @@ header {
     /* position: fixed;
     z-index: 2; */
 }
+
+header input {
+    visibility: hidden;
+}
+
 main {
     /* padding-top: 70px; */
     font-family: 'Montserrat', sans-serif;
@@ -29,6 +34,25 @@ footer {
     clear: both;
     
 }
+
+.icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #f1d7dd;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out
+}
+
 .navlogo {
     width: 70px;
     border-radius: 12px;
@@ -68,7 +92,7 @@ footer {
 
 .sub-menu-1 {
     display: none;
-    background-color: #0c0d12e2;
+    background-color: #27282c;
     padding: 10px;
     width: auto;
 
@@ -76,7 +100,7 @@ footer {
 
 .sub-menu-1 ul li {
     height: 30px;
-    margin: 10px 35px 10px 0;
+    margin: 0 30px 0 0px;
     list-style-type: none;
     border-bottom: 2px dashed #f1d7dd;
 }
@@ -103,6 +127,7 @@ footer {
 
 .bannerIMG1 span{
     margin: 0;
+    padding: 0 1% 0 1%;
     color: #f1d7dd;
     text-align: center;
     /* line-height: 400px; */
@@ -110,7 +135,7 @@ footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgba(11, 12, 18, 0.741);
     border-radius: 12px;
-    width: 30%;
+    width: auto;
     
 }
 
@@ -219,6 +244,7 @@ footer {
 
 .intro-descr {
     font-size: 18px;
+    
 }
 
 .achievs {
@@ -339,8 +365,180 @@ footer {
     padding: 0;
 }
 
+/*--------- AboutUs page ---------------------------------------------------------------------------------------------------------------------------------- */
+
+.img-store {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../resources/products/MagazinPoza.jpg');
+    background-attachment: fixed;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    /* background-position: -250px; */
+    background-repeat: no-repeat;
+}
+
+.img-store span {
+    margin: 0;
+    padding: 0 1% 0 1%;
+    color: #f1d7dd;
+    /* text-align: center; */
+    /* line-height: 400px; */
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(11, 12, 18, 0.741);
+    border-radius: 12px;
+    width: auto;
+}
+
+.images img {
+    width: 108px;
+    height: auto;
+    padding: 5px;
+
+    
+}
+
+.partners-images h3 {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.prth3 {
+    border-bottom: 2px solid #0c0d12b1;
+    padding-bottom: 1%;
+}
+
+.images {
+    background-color: #f1d7dd;
+  
+
+}
+
+
+
+/* */
+
+
+/*--------- ContactUs page ---------------------------------------------------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+body{
+    font-family: 'Montserrat', sans-serif;
+
+}
+.contact-wrap
+{
+    width:90%;
+    height:auto;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 2%;
+    /* border-radius: ; */
+    
+}
+
+.contact-in
+{
+    padding: 40px 30px;
+ 
+}
+.contact-in:nth-child(1){
+    flex:10%;
+    background-image: url('../resources/products/ContactUsPic.jpg');
+    background-size: cover;
+}
+ 
+.contact-in:nth-child(2){
+    flex:25%;
+    padding: 0;
+    flex-wrap: wrap;
+
+    
+}
+.contact-in h1{
+    font-size: 24px;
+    color: #f1d7dd;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.contact-in h2 i{
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: #f1d7dd;
+    color: #0c0d12d4;
+    border-radius:50px;
+    line-height:40px;
+    text-align:center;
+}
+.description{
+    font-size:16px;
+    font-weight: 300;
+    color: #f1d7dd;
+    margin-bottom:20px;
+}
+ 
+.contact-in iframe{
+    width:100%;
+    height:100%;
+}
+
+.item {
+    color: #f1d7dd;
+}
+
+
+
+/* */
+
 
 @media (max-width: 928px){
+
+    .contact-in:nth-child(1){
+        width: 90%;
+        background-image: url('../resources/products/ContactUsPic.jpg');
+        background-size: cover;
+    }
+     
+    .contact-in:nth-child(2){
+        width: 90%;
+        padding: 0;
+        flex-wrap: wrap;
+    
+        
+    }
+
+    .contact-wrap .contact-in {
+    width:90%;
+    height:auto;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 2%;
+    /* border-radius: ; */
+    
+    }
+
+  
+
+    .contact-in iframe{
+        width:351px;
+        height:355px;
+    }
+
+
+    
     
     .bannerIMG1 {
         background: url('../resources/products/bannerCenter.jpg');
@@ -371,7 +569,7 @@ footer {
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        /* box-shadow: 3px 3px 6px; */
+        /* box-shadow: 3px 3px 6px;
     }
     
     .achievs ul li span {
@@ -403,8 +601,104 @@ footer {
 }
 
 @media (max-width: 795px) {
+
+    header {
+        position: fixed;
+        background-color: #27282c;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
+    .sub-menu-1 ul li {
+        height: 30px;
+        margin: 60px 35px;
+        list-style-type: none;
+        border: none;
+    }
+
+    .partners-images img{
+        margin: 0 7%;
+    }
+
+    .achievs ul img {
+        width: 40px;
+    }
+
+    .achievs ul {
+        padding:0;
+    }
+
+    .achievs ul li span {
+        font-size: 14px;
+    }
+
+    .bannerIMG1 span {
+        font-size: 65px
+    }
+
+    .img-store span {
+        margin: 0;
+        padding: 0 1% 0 1%;
+        color: #f1d7dd;
+        /* text-align: center; */
+        /* line-height: 400px; */
+        font-size: 40px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(11, 12, 18, 0.741);
+        border-radius: 12px;
+        width: auto;
+    }
+
     .logo3 {
         width: 300px;
+    }
+
+      /* .sub-menu-1 {
+        display: block;
+        background-color: #27282c;
+        padding: 10px;
+        width: auto;
+    
+    } */
+
+
+    .navref {
+        position: fixed;
+        top: 49px;
+        left: 0;
+        background: #27282c;
+        height: 100vh;
+        width: 100%;
+        /* bottom: 100%; */
+        display: block;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    /* .navref li:hover .sub-menu-1 {
+        display: block;
+    
+     } */
+    
+    .navref li {
+        margin: 80px 0;
+    
+    
+    } 
+
+    .navref li a {
+        font-size: 20px;
+    } 
+
+  
+    .icon-burger {
+        display: block;
+    }
+    
+    :checked ~ .navref {
+        display: none;
     }
 
 }
@@ -419,6 +713,7 @@ footer {
     .logo3 {
         width: 225px;
     }
+    
 }
 
 @media (max-width: 633px) {
@@ -426,7 +721,7 @@ footer {
         display: none;
     }
 
-@media (max-width: 538px) {
+@media (max-width: 598px) {
     .navref a {
         font-size: 12px;
     }

@@ -15,20 +15,26 @@
 <body>
     <header>
         <a href="#"><img class="navlogo" src="./resources/icons/icon.jpg" alt="PudraLogo"></a>
-        <ul class="navref">
-            <li><a class="active" href="./pages/AboutUs.html">Despre noi</a></li>
-            <li><a class="active" href="#">Produse</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="./pages/Parfum.html">Parfumuri</a></li>
-                        <li><a href="#">Truse cu cosmetică</a></li>
-                        <li><a href="#">Genți</a></li>
-                        <li><a href="#">Scruburi pentru corp</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a class="active" href="./pages/ContactUs.html">Contactează-ne</a></li>
-        </ul>
+        <input id="nav-toggle" type="checkbox" checked>
+            <ul class="navref">
+                <li><a class="active" href="./pages/AboutUs.html">Despre noi</a></li>
+                <li><a class="active" href="#">Produse</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="./pages/Parfum.html">Parfumuri</a></li>
+                            <li><a href="#">Truse cu cosmetică</a></li>
+                            <li><a href="#">Genți</a></li>
+                            <li><a href="#">Scruburi pentru corp</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="active" href="./pages/ContactUs.html">Contactează-ne</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
     </header>
     <main>
         <div class="bannerIMG1">
@@ -36,13 +42,9 @@
         </div>
         <div class="Intro">
             <p class="welcome">Bine ai venit la <br><span>PUDRA</span></p>
-            <p class="intro-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero unde doloremque earum tempore,
-                minus quas facere eaque, impedit suscipit ipsa, numquam quisquam sequi at voluptate eligendi labore
-                aliquam. Eius! Vitae modi atque tempora nesciunt doloremque eius earum, optio laborum consequatur alias
-                voluptates. Culpa eveniet iusto omnis provident voluptate assumenda quisquam facere praesentium laborum,
-                alias nam deleniti labore tenetur quaerat. Nisi, asperiores. Praesentium facere minima veritatis quidem
-                nostrum aperiam magni quos dicta molestias quia? Dolor quod ex deleniti, magni aperiam quo assumenda,
-                perspiciatis omnis laborum nostrum, alias sint vel porro?</p>
+            <p class="intro-descr">Lumea frumuseții te așteaptă!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sapiente distinctio corrupti nesciunt doloribus adipisci modi facere laborum a hic accusamus, iusto exercitationem recusandae sequi libero veniam accusantium qui. Vel?
+            </p>
         </div>
         <h1 class="pBantet">Top 3 vânzări produse Coreene:</h1>
         <div class="products-boxes">
@@ -52,6 +54,7 @@
                         <img src="./resources/products/produsCoreean1.jpg" alt="">
                     </div>
                     <h3>Mască naturală pentru față</h3>
+                    <h5 class="parf-type">Fabricat în Coreea</h5>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
                         obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
                         dolorum nesciunt hic.</p>
@@ -64,6 +67,7 @@
                         <img src="./resources/products/produsCoreean2.jpg" alt="">
                     </div>
                     <h3>Spumă de curățare</h3>
+                    <h5 class="parf-type">Fabricat în Coreea</h5>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
                         obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
                         dolorum nesciunt hic.</p>
@@ -76,6 +80,7 @@
                         <img src="./resources/products/produsCoreean3.jpg" alt="">
                     </div>
                     <h3>Odorizant de pori</h3>
+                    <h5 class="parf-type">Fabricat în Coreea</h5>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
                         obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
                         dolorum nesciunt hic.</p>
@@ -108,7 +113,6 @@
             <div class="SocialRefIcons">
                 <a target="_blank" href="https://www.instagram.com/pudra.md/"><img
                     src="./resources/icons/instagram.png" alt=""></a>
-                    <a target="_blank" href=""><img src="./resources/icons/facebook.png" alt=""></a>
                 </div>
                 <span class="CopyRight">&copy; Familyturcompany SRL</span>
         </div>

@@ -13,9 +13,10 @@
 <body>
     <header>
         <a href="../Home.html"><img class="navlogo" src="../resources/icons/icon.jpg" alt="PudraLogo"></a>
+        <input id="nav-toggle" type="checkbox" checked>
         <ul class="navref">
             <li><a class="active" href="../pages/AboutUs.html">Despre noi</a></li>
-            <li><a class="active" href="../pages/Products.html">Produse</a>
+            <li><a class="active" href="#">Produse</a>
                 <div class="sub-menu-1">
                     <ul>
                         <li><a href="#">Parfumuri</a></li>
@@ -25,8 +26,13 @@
                     </ul>
                 </div>
             </li>
-            <li><a class="active" href="./pages/ContactUs.html">Contactează-ne</a></li>
+            <li><a class="active" href="../pages/ContactUs.html">Contactează-ne</a></li>
         </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
     </header>
     <main>
         <div class="products-boxes">
@@ -116,7 +122,6 @@
             <div class="SocialRefIcons">
                 <a target="_blank" href="https://www.instagram.com/iherb.masha/"><img
                         src="../resources/icons/instagram.png" alt=""></a>
-                <a target="_blank" href=""><img src="../resources/icons/facebook.png" alt=""></a>
             </div>
             <span class="CopyRight">&copy; SRL. “Familyturcompany”</span>
         </div>
