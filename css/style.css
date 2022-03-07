@@ -135,7 +135,7 @@ footer {
 }
 
 .products {
-    width: 400px;
+    width: 450px;
     height: auto;
     border: 2px solid gray;
     border-radius: 5px;
@@ -228,7 +228,7 @@ footer {
 }
 
 .GIcons img {
-    width: 275px;
+    width: 325px;
     height: 100%;
     border-radius: 6px;
 }
@@ -514,9 +514,15 @@ body{
 /* */
 
 
-@media (max-width: 1366) {
+@media (max-width: 1366px) {
     .products {
         width: 350px;
+    }
+
+    .GIcons img {
+        width: 275px;
+        height: 100%;
+        border-radius: 6px;
     }
 }
 
