@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/script.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../resources/icons/icon.jpg">
     <title>Genti</title>
 </head>
 <body>
     <header>
-        <a href="../Home.html"><img class="navlogo" src="../resources/icons/icon.jpg" alt="PudraLogo"></a>
+        <a href="../Home.html"><img title="Acasa" class="navlogo" src="../resources/icons/icon.jpg" alt="PudraLogo"></a>
         <input id="nav-toggle" type="checkbox" checked>
         <ul class="navref">
             <li><a class="active" href="../pages/AboutUs.html">Despre noi</a></li>
@@ -18,7 +19,7 @@
                 <div class="sub-menu-1">
                     <ul>
                         <li><a href="../pages/Parfum.html">Parfumuri</a></li>
-                        <li><a href="../pages/Truse.html">Truse cu cosmetică</a></li>
+                        <li><a href="../pages/Seturi.html">Seturi pentru îngrijire</a></li>
                         <li><a href="#">Genți</a></li>
                         <li><a href="../pages/Scrub.html">Scruburi pentru corp</a></li>
                     </ul>
@@ -33,86 +34,122 @@
         </label>
     </header>
     <main>
+
+        <div id="form" class="form-buy">
+            <form action="https://sheetdb.io/api/v1/w4jlsegt40qbb" method="POST" id="formular">
+                <p class="formp">Comandă acum:</p>
+                <fieldset>
+                    <legend class="form-text">Pudra</legend>
+                    <label class="form-text" for="nume">Nume:</label>
+                    <input name="data[Nume]" id="nume" minlength="3" maxlength="10" type="text"
+                        placeholder="Nume/Prenume" required>
+                    <br> <br>
+                    <label class="form-text" for="email">Email:</label>
+                    <input name="data[Email]" id="email" type="email" placeholder="Email...">
+                    <br> <br>
+                    <label class="form-text" for="data">Data Completarii:</label>
+                    <input name="data[Data]" type="date" id="data">
+                    <br> <br>
+                    <label class="form-text" for="tel">Telefon:</label>
+                    <input name="data[Telefon]" type="tel" id="tel" placeholder="+37368953672">
+                    <br>
+                    <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
+                    <br> <br>
+                    <input type="submit" value="Trimite">
+                </fieldset>
+            </form>
+        </div>
+
         <div class="products-boxes">
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusGeanta1.jpg" alt="">
                     </div>
-                    <h3>Barakkat Rouge 540</h3>
-                    <h5 class="parf-type">Maison Eau De Parfum Vaporisateur</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius illo adipisci impedit deleniti
-                        tenetur sit ipsum corporis omnis officia maiores iusto eligendi expedita, ut aut, sint odit
-                        saepe debitis culpa!</p>
+                    <h3>Hiyuxin</h3>
+                    <h5 class="parf-type">Codul produsului: 000027</h5>
+                    <p><span class="domain">Tip:</span> Ghiozdan</p>
+                    <p><span class="domain">Stil:</span> Casual</p>
+                    <p><span class="domain">Culoare:</span> Galben</p>
+                    <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusGeanta2.jpg" alt="">
                     </div>
-                    <h3>Friendly Lady</h3>
-                    <h5 class="parf-type">Eau De Parfum Vaporisateur</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h3>Monroe Fashion</h3>
+                    <h5 class="parf-type">Codul produsului: 000026</h5>
+                    <p><span class="domain">Tip:</span> Ghiozdan</p>
+                    <p><span class="domain">Stil:</span> Casual</p>
+                    <p><span class="domain">Culoare:</span> Negru</p>
+                    <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusGeanta3.jpg" alt="">
                     </div>
-                    <h3>Rose Seduction Secret</h3>
-                    <h5 class="parf-type">Eau de Parfum</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h3>Vogue Style Design</h3>
+                    <h5 class="parf-type">Codul produsului: 000025</h5>
+                    <p><span class="domain">Tip:</span> Ghiozdan</p>
+                    <p><span class="domain">Stil:</span> Casual</p>
+                    <p><span class="domain">Culoare:</span> Urban Color</p>
+                    <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button href class="btn">Comandă acum</button>
+                <button onclick="show()" href class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusGeanta4.jpg" alt="">
                     </div>
-                    <h3>Versencia Oro</h3>
-                    <h5 class="parf-type">Maison Alhambra</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h3>KimK</h3>
+                    <h5 class="parf-type">Codul produsului: 000024</h5>
+                    <p><span class="domain">Tip:</span> Geantă cu clapă</p>
+                    <p><span class="domain">Stil:</span> Elegant, stilat</p>
+                    <p><span class="domain">Culoare:</span> Roșu</p>
+                    <p><span class="domain">Material:</span> Piele artificială</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusGeanta5.jpg" alt="">
                     </div>
-                    <h3>Toro Pour Homme</h3>
-                    <h5 class="parf-type">Maison Alhambra</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h3>Chevron</h3>
+                    <h5 class="parf-type">Codul produsului: 000022</h5>
+                    <p><span class="domain">Tip:</span> Geantă cu clapă</p>
+                    <p><span class="domain">Stil:</span> Elegant, classic</p>
+                    <p><span class="domain">Culoare:</span> Negru</p>
+                    <p><span class="domain">Material:</span> Piele artificială</p>
+                   
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusGeanta6.jpg" alt="">
                     </div>
-                    <h3>Versencia Noir</h3>
-                    <h5 class="parf-type">Maison Alhambra</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h3>Geemont</h3>
+                    <h5 class="parf-type">Codul produsului: 000023</h5>
+                    <p><span class="domain">Tip:</span> Geantă cu fermoar</p>
+                    <p><span class="domain">Stil:</span> Elegant, practic</p>
+                    <p><span class="domain">Culoare:</span> Mentă</p>
+                    <p><span class="domain">Material:</span> Piele artificială</p>
                 </div>
-                <button href class="btn">Comandă acum</button>
+                <button onclick="show()" href class="btn">Comandă acum</button>
             </div>
         </div>
+        <div class="gotopbtn">
+            <a href="#"><img title="Mergi sus" src="../resources/icons/arrow-up.png" /></a>
+          </div>
     </main>
     <footer>
         <div class="Footercontent">

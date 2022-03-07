@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/script.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../resources/icons/icon.jpg">
     <title>Parfum</title>
@@ -12,7 +13,7 @@
 
 <body>
     <header>
-        <a href="../Home.html"><img class="navlogo" src="../resources/icons/icon.jpg" alt="PudraLogo"></a>
+        <a href="../Home.html"><img title="Acasa" class="navlogo" src="../resources/icons/icon.jpg" alt="PudraLogo"></a>
         <input id="nav-toggle" type="checkbox" checked>
         <ul class="navref">
             <li><a class="active" href="../pages/AboutUs.html">Despre noi</a></li>
@@ -20,7 +21,7 @@
                 <div class="sub-menu-1">
                     <ul>
                         <li><a href="#">Parfumuri</a></li>
-                        <li><a href="../pages/Truse.html">Truse cu cosmetică</a></li>
+                        <li><a href="../pages/Seturi.html">Seturi pentru îngrijire</a></li>
                         <li><a href="../pages/Genti.html">Genți</a></li>
                         <li><a href="../pages/Scrub.html">Scruburi pentru corp</a></li>
                     </ul>
@@ -35,19 +36,50 @@
         </label>
     </header>
     <main>
+
+        <div id="form" class="form-buy">
+            <form action="https://sheetdb.io/api/v1/w4jlsegt40qbb" method="POST" id="formular">
+                <p class="formp">Comandă acum:</p>
+                <fieldset>
+                    <legend class="form-text">Pudra</legend>
+                    <label class="form-text" for="nume">Nume:</label>
+                    <input name="data[Nume]" id="nume" minlength="3" maxlength="10" type="text"
+                        placeholder="Nume/Prenume" required>
+                    <br> <br>
+                    <label class="form-text" for="email">Email:</label>
+                    <input name="data[Email]" id="email" type="email" placeholder="Email...">
+                    <br> <br>
+                    <label class="form-text" for="data">Data Completarii:</label>
+                    <input name="data[Data]" type="date" id="data">
+                    <br> <br>
+                    <label class="form-text" for="tel">Telefon:</label>
+                    <input name="data[Telefon]" type="tel" id="tel" placeholder="+37368953672">
+                    <br>
+                    <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
+                    <br> <br>
+                    <input type="submit" value="Trimite">
+                </fieldset>
+            </form>
+        </div>
+
         <div class="products-boxes">
             <div class="products">
                 <div>
                     <div class="GIcons">
                         <img src="../resources/products/ProdusParfum1.jpg" alt="">
                     </div>
-                    <h3>Barakkat Rouge 540</h3>
-                    <h5 class="parf-type">Maison Eau De Parfum Vaporisateur</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius illo adipisci impedit deleniti
-                        tenetur sit ipsum corporis omnis officia maiores iusto eligendi expedita, ut aut, sint odit
-                        saepe debitis culpa!</p>
+                    <h3> Barakkat Rouge 540</h3>
+                    <h5 class="parf-type">Codul produsului: 00001</h5>
+                    <p><span class="domain">Data lansării:</span> 2010</p>
+                    <p><span class="domain">Producător:</span> Fragrance World</p>
+                    <p><span class="domain">Tip:</span> Parfum de lungă durată</p>
+                    <p><span class="domain">Aromă:</span> Lemn, Floral</p>
+                    <p><span class="domain">Nota de vârf:</span> Șofran, Iasomie</p>
+                    <p><span class="domain">Nota de mijloc:</span> Lemn de chihlimbar, Chihlimbar</p>
+                    <p><span class="domain">Nota de bază:</span> Rășină de brad, Cedru</p>
+                    <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -55,12 +87,17 @@
                         <img src="../resources/products/ProdusParfum2.jpg" alt="">
                     </div>
                     <h3>Friendly Lady</h3>
-                    <h5 class="parf-type">Eau De Parfum Vaporisateur</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 00002</h5>
+                    <p><span class="domain">Data lansării:</span> 2000</p>
+                    <p><span class="domain">Producător:</span> Fragrance World</p>
+                    <p><span class="domain">Tip:</span> Parfum de lungă durată</p>
+                    <p><span class="domain">Aromă:</span> Citrus</p>
+                    <p><span class="domain">Nota de vârf:</span> Zmeură, neroli, citrice</p>
+                    <p><span class="domain">Nota de mijloc:</span> Gardenia, iasomie, floare de portocal</p>
+                    <p><span class="domain">Nota de bază:</span> Miere, paciuli</p>
+                    <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -68,12 +105,17 @@
                         <img src="../resources/products/ProdusParfum3.jpg" alt="">
                     </div>
                     <h3>Rose Seduction Secret</h3>
-                    <h5 class="parf-type">Eau de Parfum</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 00003</h5>
+                    <p><span class="domain">Data lansării:</span> 2000</p>
+                    <p><span class="domain">Producător:</span>Emiratele Arabe Unite</p>
+                    <p><span class="domain">Tip:</span> Parfum de lungă durată</p>
+                    <p><span class="domain">Aromă:</span> Fructe</p>
+                    <p><span class="domain">Nota de vârf:</span> Ananas, fructul pasiunii, jumătate de lună, citrice</p>
+                    <p><span class="domain">Nota de mijloc:</span> Iasomie, Konvaliya, Orhidee, Pivonia, Fructe roșii</p>
+                    <p><span class="domain">Nota de bază:</span> Note lemnoase, lichen, mosc</p>
+                    <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button href class="btn">Comandă acum</button>
+                <button onclick="show()" href class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -81,12 +123,17 @@
                         <img src="../resources/products/ProdusParfum4.jpg" alt="">
                     </div>
                     <h3>Versencia Oro</h3>
-                    <h5 class="parf-type">Maison Alhambra</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 00004</h5>
+                    <p><span class="domain">Data lansării:</span> 2000</p>
+                    <p><span class="domain">Producător:</span> Emiratele Arabe Unite</p>
+                    <p><span class="domain">Tip:</span> Parfum de lungă durată</p>
+                    <p><span class="domain">Aromă:</span> Pahare de vin</p>
+                    <p><span class="domain">Nota de vârf:</span> Mentă, Citrice, Măr</p>
+                    <p><span class="domain">Nota de mijloc:</span> Ambroxan</p>
+                    <p><span class="domain">Nota de bază:</span> Vetiver, Cedru, Muschi</p>
+                    <p><span class="domain">Sex:</span> Pentru bărbați</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -94,12 +141,17 @@
                         <img src="../resources/products/ProdusParfum5.jpg" alt="">
                     </div>
                     <h3>Toro Pour Homme</h3>
-                    <h5 class="parf-type">Maison Alhambra</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 00005</h5>
+                    <p><span class="domain">Data lansării:</span> 2000</p>
+                    <p><span class="domain">Producător:</span> Emiratele Arabe Unite</p>
+                    <p><span class="domain">Tip:</span> Parfum de lungă durată</p>
+                    <p><span class="domain">Aromă:</span> Lemnos, picant</p>
+                    <p><span class="domain">Nota de vârf:</span> Portocală, Grapefruit</p>
+                    <p><span class="domain">Nota de mijloc:</span> Cedru, piper, trandafir</p>
+                    <p><span class="domain">Nota de bază:</span> Vetiver, paciuli</p>
+                    <p><span class="domain">Sex:</span> Pentru bărbați</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -107,14 +159,22 @@
                         <img src="../resources/products/ProdusParfum6.jpg" alt="">
                     </div>
                     <h3>Versencia Noir</h3>
-                    <h5 class="parf-type">Maison Alhambra</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 00006</h5>
+                    <p><span class="domain">Data lansării:</span> 2000</p>
+                    <p><span class="domain">Producător:</span> Emiratele Arabe Unite</p>
+                    <p><span class="domain">Tip:</span> Parfum de lungă durată</p>
+                    <p><span class="domain">Aromă:</span> Floral, oriental</p>
+                    <p><span class="domain">Nota de vârf:</span> Ghimbir, cardamom, piper</p>
+                    <p><span class="domain">Nota de mijloc:</span> Gardenia, nucă de cocos, bujor, flori de portocală</p>
+                    <p><span class="domain">Nota de bază:</span> Chihlimbar, mosc, lemn de santal</p>
+                    <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button href class="btn">Comandă acum</button>
+                <button onclick="show()" href class="btn">Comandă acum</button>
             </div>
         </div>
+        <div class="gotopbtn">
+            <a href="#"><img title="Mergi sus" src="../resources/icons/arrow-up.png" /></a>
+          </div>
     </main>
     <footer>
         <div class="Footercontent">

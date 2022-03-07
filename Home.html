@@ -7,6 +7,7 @@
     <meta name="description" content="Pudra Web Site">
     <meta name="keywords" content="Pudra, Cosmetică, Igiena-personala, magazin de cosmetică">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./resources/icons/icon.jpg">
     <title>Pudra</title>
@@ -14,37 +15,71 @@
 
 <body>
     <header>
-        <a href="#"><img class="navlogo" src="./resources/icons/icon.jpg" alt="PudraLogo"></a>
+        <a href="#"><img title="Acasa" class="navlogo" src="./resources/icons/icon.jpg" alt="PudraLogo"></a>
         <input id="nav-toggle" type="checkbox" checked>
-            <ul class="navref">
-                <li><a class="active" href="./pages/AboutUs.html">Despre noi</a></li>
-                <li><a class="active" href="#">Produse</a>
-                    <div class="sub-menu-1">
-                        <ul>
-                            <li><a href="./pages/Parfum.html">Parfumuri</a></li>
-                            <li><a href="#">Truse cu cosmetică</a></li>
-                            <li><a href="#">Genți</a></li>
-                            <li><a href="#">Scruburi pentru corp</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a class="active" href="./pages/ContactUs.html">Contactează-ne</a></li>
-            </ul>
-            <label for="nav-toggle" class="icon-burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </label>
+        <ul class="navref">
+            <li><a class="active" href="./pages/AboutUs.html">Despre noi</a></li>
+            <li><a class="active" href="#">Produse</a>
+                <div id="submenu" class="sub-menu-1">
+                    <ul>
+                        <li><a href="./pages/Parfum.html">Parfumuri</a></li>
+                        <li><a href="./pages/Seturi.html">Seturi pentru îngrijire</a></li>
+                        <li><a href="./pages/Genti.html">Genți</a></li>
+                        <li><a href="./pages/Scrub.html">Scruburi pentru corp</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="active" href="./pages/ContactUs.html">Contactează-ne</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
     </header>
     <main>
+
+        <div id="form" class="form-buy">
+            <form action="https://sheetdb.io/api/v1/w4jlsegt40qbb" method="POST" id="formular">
+                <p class="formp">Comandă acum:</p>
+                <fieldset>
+                    <legend class="form-text">Pudra</legend>
+                    <label class="form-text" for="nume">Nume:</label>
+                    <input name="data[Nume]" id="nume" minlength="3" maxlength="10" type="text"
+                        placeholder="Nume/Prenume" required>
+                    <br> <br>
+                    <label class="form-text" for="email">Email:</label>
+                    <input name="data[Email]" id="email" type="email" placeholder="Email...">
+                    <br> <br>
+                    <label class="form-text" for="data">Data Completarii:</label>
+                    <input name="data[Data]" type="date" id="data">
+                    <br> <br>
+                    <label class="form-text" for="tel">Telefon:</label>
+                    <input name="data[Telefon]" type="tel" id="tel" placeholder="+37368953672">
+                    <br>
+                    <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
+                    <br> <br>
+                    <input type="submit" value="Trimite">
+                </fieldset>
+            </form>
+        </div>
+
         <div class="bannerIMG1">
-                <span>PUDRA</span>
+            <span>PUDRA</span>
         </div>
         <div class="Intro">
             <p class="welcome">Bine ai venit la <br><span>PUDRA</span></p>
-            <p class="intro-descr">Lumea frumuseții te așteaptă!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sapiente distinctio corrupti nesciunt doloribus adipisci modi facere laborum a hic accusamus, iusto exercitationem recusandae sequi libero veniam accusantium qui. Vel?
-            </p>
+            <p class="intro-descr">Descoperă o gamă largă de cosmetică organică, de îngrijire corporală. Produsele
+                noastre bogate în uleiuri esențiale pentru eficacitatea îngrijirii feței și a corpului. Profită de
+                sinergia cosmeticii pentru a spori frumusețea, vitalitatea și pentru a îmbunătăți starea de bine.
+                Consilierii noștri vor fi bucuroși să vă ofere sfaturi utile pentru utilizarea produselor de îngrijire
+                naturală. De asemenea, oferim produse terapeutice organice. Sprijinim alegerea în concordanță cu
+                convingerile și nevoile dumneavoastră. </p>
+            <p>Rutina ideală cu o selecție de produse formulate fără compromis: calitate înaltă, eficiență, naturalețe
+                înainte de toate. Calitatea componentelor îngrijirii dumneavoastră este esențială pentru eficacitatea,
+                de aceea suntem extrem de pretențioși cu privire la originea și metodele lor de extracție sau
+                transformare. </p>
+            <p>Suntem fericiți să oferim produse de vârf la prețuri imbatabile. <br>Lumea frumuseții te așteaptă!</p>
         </div>
         <h1 class="pBantet">Top 3 vânzări produse Coreene:</h1>
         <div class="products-boxes">
@@ -54,12 +89,12 @@
                         <img src="./resources/products/produsCoreean1.jpg" alt="">
                     </div>
                     <h3>Mască naturală pentru față</h3>
-                    <h5 class="parf-type">Fabricat în Coreea</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 000019</h5>
+                    <p><span class="domain">Produs în:</span> Coreea</p>
+                    <p>Masca de zi cu zi Pure Essence pentru catifelarea si hidratarea pielii Masca hrănitoare care are
+                        o foaie groasă de mască care furnizează toți nutrienții pielii.</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -67,12 +102,12 @@
                         <img src="./resources/products/produsCoreean2.jpg" alt="">
                     </div>
                     <h3>Spumă de curățare</h3>
-                    <h5 class="parf-type">Fabricat în Coreea</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 000020</h5>
+                    <p><span class="domain">Produs în:</span> Coreea</p>
+                    <p>Formulat cu un complex Pure Green pentru o curățare blândă, spuma noastră de curățare este
+                        îmbogățită cu diferite ingrediente.</p>
                 </div>
-                <button class="btn">Comandă acum</button>
+                <button onclick="show()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -80,12 +115,12 @@
                         <img src="./resources/products/produsCoreean3.jpg" alt="">
                     </div>
                     <h3>Odorizant de pori</h3>
-                    <h5 class="parf-type">Fabricat în Coreea</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci odio totam, dicta vel
-                        obcaecati earum enim! Tempore voluptate sapiente ipsa non id nihil eaque veniam, illum ad
-                        dolorum nesciunt hic.</p>
+                    <h5 class="parf-type">Codul produsului: 000021</h5>
+                    <p><span class="domain">Produs în:</span> Coreea</p>
+                    <p>Îngrijire cu mentă tratează eficient porii. Bulele de mentă oferă o curățare
+                        profundă, mentolul îndepărtează pielea moartă. Îndepărtează impuritățile.</p>
                 </div>
-                <button href class="btn">Comandă acum</button>
+                <button onclick="show()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div>
@@ -106,19 +141,22 @@
             <div class="bannerIMG2">
             </div>
         </div>
+        <div class="gotopbtn">
+            <a href="#"><img title="Mergi sus" src="./resources/icons/arrow-up.png" /></a>
+        </div>
     </main>
     <footer>
         <div class="Footercontent">
             <span class="logo2" title="Home"><img src="./resources/icons/icon.jpg" alt=""></span>
             <div class="SocialRefIcons">
-                <a target="_blank" href="https://www.instagram.com/pudra.md/"><img
-                    src="./resources/icons/instagram.png" alt=""></a>
-                </div>
-                <span class="CopyRight">&copy; Familyturcompany SRL</span>
+                <a target="_blank" href="https://www.instagram.com/pudra.md/"><img src="./resources/icons/instagram.png"
+                        alt=""></a>
+            </div>
+            <span class="CopyRight">&copy; SRL. “Familyturcompany”</span>
         </div>
         <div class="disclaimer">
-            <div>Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors” organizată de proiectul
-                ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div>
+            <div>Acest website a fost realizat în cadrul competiției ”Tekwill Junior Ambassadors” organizată de
+                proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia proiectului.</div>
         </div>
     </footer>
 </body>
