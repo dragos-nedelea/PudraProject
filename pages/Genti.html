@@ -35,23 +35,26 @@
     </header>
     <main>
 
-        <div id="form" class="form-buy">
+        <div id="form5" class="form-buy">
+            <div class="overlay" id="overlay-toggle"></div>
+            <div class="close-btn" onclick="togglePopup5()">&times;</div>
             <form action="https://sheetdb.io/api/v1/w4jlsegt40qbb" method="POST" id="formular">
                 <p class="formp">Comandă acum:</p>
                 <fieldset>
                     <legend class="form-text">Pudra</legend>
                     <label class="form-text" for="nume">Nume:</label>
-                    <input name="data[Nume]" id="nume" minlength="3" maxlength="10" type="text"
-                        placeholder="Nume/Prenume" required>
+                    <input name="data[Nume]" id="nume" minlength="3" maxlength="15" type="text"
+                        placeholder="Nume Prenume" required>
+                    <br> <br>
+                    <label class="form-text" for="cod">Codul produsului:</label>
+                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text"
+                        placeholder="00000" required>
                     <br> <br>
                     <label class="form-text" for="email">Email:</label>
                     <input name="data[Email]" id="email" type="email" placeholder="Email...">
                     <br> <br>
-                    <label class="form-text" for="data">Data Completarii:</label>
-                    <input name="data[Data]" type="date" id="data">
-                    <br> <br>
                     <label class="form-text" for="tel">Telefon:</label>
-                    <input name="data[Telefon]" type="tel" id="tel" placeholder="+37368953672">
+                    <input name="data[Telefon]" type="tel" id="tel" placeholder="+37368953672" required>
                     <br>
                     <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
                     <br> <br>
@@ -67,13 +70,13 @@
                         <img src="../resources/products/ProdusGeanta1.jpg" alt="">
                     </div>
                     <h3>Hiyuxin</h3>
-                    <h5 class="parf-type">Codul produsului: 000027</h5>
+                    <h5 class="parf-type">Codul produsului: 00027</h5>
                     <p><span class="domain">Tip:</span> Ghiozdan</p>
                     <p><span class="domain">Stil:</span> Casual</p>
                     <p><span class="domain">Culoare:</span> Galben</p>
                     <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button onclick="show()" class="btn">Comandă acum</button>
+                <button onclick="show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -81,13 +84,13 @@
                         <img src="../resources/products/ProdusGeanta2.jpg" alt="">
                     </div>
                     <h3>Monroe Fashion</h3>
-                    <h5 class="parf-type">Codul produsului: 000026</h5>
+                    <h5 class="parf-type">Codul produsului: 00026</h5>
                     <p><span class="domain">Tip:</span> Ghiozdan</p>
                     <p><span class="domain">Stil:</span> Casual</p>
                     <p><span class="domain">Culoare:</span> Negru</p>
                     <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button onclick="show()" class="btn">Comandă acum</button>
+                <button onclick="show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -95,13 +98,13 @@
                         <img src="../resources/products/ProdusGeanta3.jpg" alt="">
                     </div>
                     <h3>Vogue Style Design</h3>
-                    <h5 class="parf-type">Codul produsului: 000025</h5>
+                    <h5 class="parf-type">Codul produsului: 00025</h5>
                     <p><span class="domain">Tip:</span> Ghiozdan</p>
                     <p><span class="domain">Stil:</span> Casual</p>
                     <p><span class="domain">Culoare:</span> Urban Color</p>
                     <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button onclick="show()" href class="btn">Comandă acum</button>
+                <button onclick="show5()" href class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -109,13 +112,13 @@
                         <img src="../resources/products/ProdusGeanta4.jpg" alt="">
                     </div>
                     <h3>KimK</h3>
-                    <h5 class="parf-type">Codul produsului: 000024</h5>
+                    <h5 class="parf-type">Codul produsului: 00024</h5>
                     <p><span class="domain">Tip:</span> Geantă cu clapă</p>
                     <p><span class="domain">Stil:</span> Elegant, stilat</p>
                     <p><span class="domain">Culoare:</span> Roșu</p>
                     <p><span class="domain">Material:</span> Piele artificială</p>
                 </div>
-                <button onclick="show()" class="btn">Comandă acum</button>
+                <button onclick="show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -123,14 +126,14 @@
                         <img src="../resources/products/ProdusGeanta5.jpg" alt="">
                     </div>
                     <h3>Chevron</h3>
-                    <h5 class="parf-type">Codul produsului: 000022</h5>
+                    <h5 class="parf-type">Codul produsului: 00023</h5>
                     <p><span class="domain">Tip:</span> Geantă cu clapă</p>
                     <p><span class="domain">Stil:</span> Elegant, classic</p>
                     <p><span class="domain">Culoare:</span> Negru</p>
                     <p><span class="domain">Material:</span> Piele artificială</p>
                    
                 </div>
-                <button onclick="show()" class="btn">Comandă acum</button>
+                <button onclick="show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -138,13 +141,13 @@
                         <img src="../resources/products/ProdusGeanta6.jpg" alt="">
                     </div>
                     <h3>Geemont</h3>
-                    <h5 class="parf-type">Codul produsului: 000023</h5>
+                    <h5 class="parf-type">Codul produsului: 00022</h5>
                     <p><span class="domain">Tip:</span> Geantă cu fermoar</p>
                     <p><span class="domain">Stil:</span> Elegant, practic</p>
                     <p><span class="domain">Culoare:</span> Mentă</p>
                     <p><span class="domain">Material:</span> Piele artificială</p>
                 </div>
-                <button onclick="show()" href class="btn">Comandă acum</button>
+                <button onclick="show5()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div class="gotopbtn">
