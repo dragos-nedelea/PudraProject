@@ -7,7 +7,7 @@
     <meta name="description" content="Pudra Web Site">
     <meta name="keywords" content="Pudra, Cosmetică, Igiena-personala, magazin de cosmetică">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./resources/icons/icon.jpg">
     <title>Pudra</title>
@@ -52,7 +52,7 @@
                     <br> <br>
                     <label class="form-text" for="cod">Codul produsului:</label>
                     <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text"
-                        placeholder="00000" required>
+                        value="00000" required readonly>
                     <br> <br>
                     <label class="form-text" for="email">Email:</label>
                     <input name="data[Email]" id="email" type="email" placeholder="Email...">
@@ -97,7 +97,7 @@
                     <p>Masca de zi cu zi Pure Essence pentru catifelarea si hidratarea pielii Masca hrănitoare care are
                         o foaie groasă de mască care furnizează toți nutrienții pielii.</p>
                 </div>
-                <button onclick="show1()" class="btn">Comandă acum</button>
+                <button onclick="cod1(); show1()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -105,12 +105,12 @@
                         <img src="./resources/products/produsCoreean2.jpg" alt="">
                     </div>
                     <h3>Spumă de curățare</h3>
-                    <h5 class="parf-type">Codul produsului: 00020</h5>
+                    <h5 class="parf-type">Codul produsului: <span id="00020">00020</span></h5>
                     <p><span class="domain">Produs în:</span> Coreea</p>
                     <p>Formulat cu un complex Pure Green pentru o curățare blândă, spuma noastră de curățare este
                         îmbogățită cu diferite ingrediente.</p>
                 </div>
-                <button onclick="show1()" class="btn">Comandă acum</button>
+                <button onclick="cod2(); show1()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -123,7 +123,7 @@
                     <p>Îngrijire cu mentă tratează eficient porii. Bulele de mentă oferă o curățare
                         profundă, mentolul îndepărtează pielea moartă. Îndepărtează impuritățile.</p>
                 </div>
-                <button onclick="show1()" href class="btn">Comandă acum</button>
+                <button onclick=" cod3(); show1()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div>

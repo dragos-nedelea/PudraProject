@@ -67,6 +67,8 @@ footer {
 
 .navref a:hover {
     color: #fcedf1;
+    transition-duration: 350ms;
+
 }
 
  .navref li:hover .sub-menu-1 {
@@ -234,6 +236,10 @@ footer {
 
 .form-text {
     color: #f1d7dd;
+}
+
+.form-buy {
+    transition-duration: 500ms;
 }
 
 .ProductSeparation {
