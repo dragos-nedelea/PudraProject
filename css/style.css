@@ -21,6 +21,7 @@ header {
 
 header:hover {
     height: 4.5em;
+    background-color: #0c0d12;
 }
 
 header input {
@@ -60,6 +61,11 @@ footer {
     border-radius: 12px;
     padding: 10px;
     margin-left: 15px;
+    transition: 1s;
+}
+
+.navlogo:hover {
+    transform: scale(1.1,1.1);
 }
 
 .navref {
@@ -94,7 +100,7 @@ footer {
 
 .sub-menu-1 {
     display: none;
-    background-color: #27282c;
+    background-color: #0c0d12;
     padding: 10px;
     width: auto;
 
@@ -165,7 +171,8 @@ footer {
 }
 
 .products:hover {
-    transform: scale(1.1,1.1);
+    transform: scale(1.06,1.06);
+    background-color: #0c0d12;
 }
 
 .products p {
@@ -405,6 +412,11 @@ footer {
 
 .SocialRefIcons img{
     width: 30px;
+    transition: 1s;
+}
+
+.SocialRefIcons img:hover {
+    transform: scale(1.2,1.2);
 }
 
 .disclaimer {
