@@ -201,13 +201,43 @@ function cod27() {
 }
 
 var form = document.getElementById("formular");
-form.addEventListener("submit", e => {
-    e.preventDefault();
-    fetch(form.action, {
-        method: "POST",
-        body: new FormData(document.getElementById("formular")),
-    }).then(() =>{
-        alert("Multumesc!");
-        form.reset();
+
+if (form) {
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("formular")),
+        }).then(() => {
+            alert("Multumesc!");
+            form.reset();
+        });
     });
-});
+}
+
+
+/*--------- gotopbtn function ---------------------------------------------------------------------------------------------------------------------------------- */
+const showOnPx = 100;
+const backToTopButton = document.querySelector(".gotopbtn")
+
+const scrollContainer = () => {
+    return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+    if (scrollContainer().scrollTop > showOnPx) {
+        backToTopButton.classList.remove("hidden")
+    } else {
+        backToTopButton.classList.add("hidden")
+    }
+})
+
+const goToTop = () => {
+    document.body.scrollIntoView({
+        behavior: "smooth",
+    });
+};
+backToTopButton.addEventListener("click", goToTop)
+
+
+/*---------  ---------------------------------------------------------------------------------------------------------------------------------- */

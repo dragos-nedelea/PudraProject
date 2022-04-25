@@ -16,7 +16,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    transition: 1s;
+    transition: .5s;
 }
 
 header:hover {
@@ -35,7 +35,11 @@ footer {
     height: auto;
     background-color: #0c0d12e2;
     clear: both;
-    
+    transition: .5s;
+}
+
+footer:hover {
+    background-color: #0c0d12;
 }
 
 .icon-burger {
@@ -62,6 +66,11 @@ footer {
     padding: 10px;
     margin-left: 15px;
     transition: 1s;
+
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .navlogo:hover {
@@ -103,7 +112,7 @@ footer {
     background-color: #0c0d12;
     padding: 10px;
     width: auto;
-
+    z-index: 1;
 }
 
 .sub-menu-1 ul li {
@@ -437,14 +446,19 @@ footer {
     position: fixed; 
     bottom: 3px; 
     right: 30px; 
-    
+    transition: all 1s;
+    cursor: pointer;
+}
 
+.hidden {
+    opacity: 0;
 }
 
 .gotopbtn img {
     width: 45px;
     height: 45px;
     transition: 1s;
+    
 }
 
 .gotopbtn img:hover {
@@ -475,6 +489,12 @@ footer {
     background-color: rgba(11, 12, 18, 0.741);
     border-radius: 12px;
     width: auto;
+    transition: 1s;
+}
+
+.img-store span:hover {
+    background-color: #0c0d12;
+    transform: scale(1.1,1.1);
 }
 
 .images img {
@@ -592,6 +612,7 @@ body{
         width: 350px;
     }
 
+
     #form1, #form2, #form3, #form4, #form5 {
         display: none;
         margin-left: auto;
@@ -614,6 +635,41 @@ body{
     
     #form2, #form3, #form4, #form5 {
         top: 100% !important;
+    }
+}
+
+@media (max-width: 1365px) {
+    
+    .products:hover {
+        transform: scale(1,1);
+        background-color: #0c0d12e2;
+    }
+
+    header:hover {
+        height: 4em;
+        background-color: #27282c;
+    }
+
+    footer:hover {
+        background-color: #0c0d12e2;
+    }
+
+    .img-store span:hover {
+        background-color: rgba(11, 12, 18, 0.741);
+        transform: scale(1,1);
+    }
+
+    .bannerIMG1 span:hover {
+        background-color: rgba(11, 12, 18, 0.741);
+        transform: scale(1,1);
+    }
+
+    .sub-menu-1 {
+        display: none;
+        background-color: #27282c;
+        padding: 10px;
+        width: auto;
+        z-index: 1;
     }
 }
 
@@ -800,9 +856,9 @@ body{
         background-color: #27282c;
     }
 
-    main {
-        padding-top: 60px;
-    }
+    /* main {
+        padding-top: 65px;
+    } */
 
     .sub-menu-1 ul li {
         height: 30px;
@@ -851,7 +907,7 @@ body{
 
     .navref {
         position: fixed;
-        top: 49px;
+        top: 48px;
         left: 0;
         background: #27282c;
         height: 100vh;
