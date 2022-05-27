@@ -37,9 +37,9 @@
     </header>
     <main>
 
-        <div id="form2" class="form-buy">
-            <div class="overlay" id="overlay-toggle"></div>
-            <div class="close-btn" onclick="togglePopup2()">&times;</div>
+        <div class="modal" id="modal">
+
+            <div data-close-button class="close-btn" onclick="togglePopup1()">&times;</div>
             <form action="https://sheetdb.io/api/v1/4xutf64m6enkb" method="POST" id="formular">
                 <p class="formp">Comandă acum:</p>
                 <fieldset>
@@ -49,8 +49,8 @@
                         placeholder="Nume Prenume" required>
                     <br> <br>
                     <label class="form-text" for="cod">Codul produsului:</label>
-                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text"
-                        placeholder="00000" required>
+                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text" value="00000" required
+                        readonly>
                     <br> <br>
                     <label class="form-text" for="email">Email:</label>
                     <input name="data[Email]" id="email" type="email" placeholder="Email...">
@@ -61,9 +61,11 @@
                     <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
                     <br> <br>
                     <input type="submit" value="Trimite">
+
                 </fieldset>
             </form>
         </div>
+        <div class="overlay" id="overlay-toggle"></div>
         <div class="products-boxes">
             <div class="products">
                 <div>
@@ -81,7 +83,7 @@
                     <p><span class="domain">Nota de bază:</span> Rășină de brad, Cedru</p>
                     <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button onclick="cod4();show2()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod4();show2()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -99,7 +101,7 @@
                     <p><span class="domain">Nota de bază:</span> Miere, paciuli</p>
                     <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button onclick="cod5();show2()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod5();show2()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -117,7 +119,7 @@
                     <p><span class="domain">Nota de bază:</span> Lichen, mosc</p>
                     <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button onclick="cod6(); show2()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod6(); show2()" href class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -135,7 +137,7 @@
                     <p><span class="domain">Nota de bază:</span> Vetiver, Cedru, Muschi</p>
                     <p><span class="domain">Sex:</span> Pentru bărbați</p>
                 </div>
-                <button onclick="cod7(); show2()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod7(); show2()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -153,7 +155,7 @@
                     <p><span class="domain">Nota de bază:</span> Vetiver, paciuli</p>
                     <p><span class="domain">Sex:</span> Pentru bărbați</p>
                 </div>
-                <button onclick="cod8(); show2()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod8(); show2()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -171,7 +173,7 @@
                     <p><span class="domain">Nota de bază:</span> Chihlimbar, mosc</p>
                     <p><span class="domain">Sex:</span> Pentru femei</p>
                 </div>
-                <button onclick="cod9(); show2()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod9(); show2()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div class="gotopbtn hiden">

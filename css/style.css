@@ -210,12 +210,19 @@ footer:hover {
     font-weight: bold;
 }
 
-#form1, #form2, #form3, #form4, #form5 {
-    display: none;
-    margin-left: auto;
-    margin-right: auto;
-    left: 33%;
-    top: 130%;
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .5s ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #27282c;
+    /* width: 500px; */
+    max-width: 80%;
+
     text-align: center;
     width: 645px;
     height: auto;
@@ -224,24 +231,31 @@ footer:hover {
     padding: 1%;
     background-color: #27282c;
     box-sizing: border-box; 
-    box-shadow: 5px 5px 5px gray; 
     text-align: left;
-    position: absolute;
-    z-index: 2;
-}
-
-#form2, #form3, #form4, #form5 {
-    top: 70% !important;
-}
-
-.overlay {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(128, 128, 128, 0.501);
-    z-index: -1;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+#overlay-toggle {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: 200ms ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#overlay-toggle.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .close-btn {
@@ -270,7 +284,7 @@ footer:hover {
 }
 
 .form-buy {
-    transition-duration: 500ms;
+    position: fixed;
 }
 
 .ProductSeparation {
@@ -302,6 +316,8 @@ footer:hover {
     width: 275px;
     height: 100%;
     border-radius: 6px;
+    /* object-fit: cover; */
+    object-position: center;
 }
 
 .parf-type {
@@ -606,40 +622,19 @@ body{
 
 /*--------- Media pages styles ---------------------------------------------------------------------------------------------------------------------------------- */
 
+    
+
 
 @media (max-width: 1366px) {
     .products {
         width: 350px;
     }
 
-
-    #form1, #form2, #form3, #form4, #form5 {
-        display: none;
-        margin-left: auto;
-        margin-right: auto;
-        left: 33%;
-        top: 190%;
-        text-align: center;
-        width: 460px;
-        height: auto;
-        border: 2px solid gray;
-        border-radius: 5px;
-        padding: 1%;
-        background-color: #27282c;
-        box-sizing: border-box; 
-        box-shadow: 5px 5px 5px gray; 
-        text-align: left;
-        position: absolute;
-        z-index: 2;
-    }
-    
-    #form2, #form3, #form4, #form5 {
-        top: 100% !important;
-    }
 }
 
-@media (max-width: 1365px) {
-    
+
+@media (max-width: 928px){
+
     .products:hover {
         transform: scale(1,1);
         background-color: #0c0d12e2;
@@ -671,10 +666,15 @@ body{
         width: auto;
         z-index: 1;
     }
-}
 
+    .navlogo:hover {
+        transform: scale(1,1);
 
-@media (max-width: 928px){
+    }
+
+    .SocialRefIcons img:hover {
+        transform: scale(1,1);
+    }
 
     .navlogo {
         width: 70px;
@@ -692,29 +692,7 @@ body{
         background-color: #f1d7dd;
     }
 
-    #form1, #form2, #form3, #form4, #form5 {
-        display: none;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        top: 220%;
-        text-align: center;
-        width: auto;
-        height: auto;
-        border: 2px solid gray;
-        border-radius: 5px;
-        padding: 1%;
-        background-color: #27282c;
-        box-sizing: border-box; 
-        box-shadow: 5px 5px 5px gray; 
-        text-align: left;
-        position: absolute;
-        z-index: 2;
-    }
-    
-    #form2, #form3, #form4, #form5 {
-        top: 100% !important;
-    }
+   
 
     .contact-in:nth-child(1){
         width: 90%;
@@ -952,4 +930,4 @@ body{
     
 }
 
-/* */
+ 

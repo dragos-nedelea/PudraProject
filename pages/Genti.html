@@ -35,9 +35,9 @@
     </header>
     <main>
 
-        <div id="form5" class="form-buy">
-            <div class="overlay" id="overlay-toggle"></div>
-            <div class="close-btn" onclick="togglePopup5()">&times;</div>
+        <div class="modal" id="modal">
+
+            <div data-close-button class="close-btn" onclick="togglePopup1()">&times;</div>
             <form action="https://sheetdb.io/api/v1/4xutf64m6enkb" method="POST" id="formular">
                 <p class="formp">Comandă acum:</p>
                 <fieldset>
@@ -47,8 +47,8 @@
                         placeholder="Nume Prenume" required>
                     <br> <br>
                     <label class="form-text" for="cod">Codul produsului:</label>
-                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text"
-                        placeholder="00000" required>
+                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text" value="00000" required
+                        readonly>
                     <br> <br>
                     <label class="form-text" for="email">Email:</label>
                     <input name="data[Email]" id="email" type="email" placeholder="Email...">
@@ -59,9 +59,11 @@
                     <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
                     <br> <br>
                     <input type="submit" value="Trimite">
+
                 </fieldset>
             </form>
         </div>
+        <div class="overlay" id="overlay-toggle"></div>
 
         <div class="products-boxes">
             <div class="products">
@@ -76,7 +78,7 @@
                     <p><span class="domain">Culoare:</span> Galben</p>
                     <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button onclick="cod22(); show5()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod22(); show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -90,7 +92,7 @@
                     <p><span class="domain">Culoare:</span> Negru</p>
                     <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button onclick="cod23(); show5()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod23(); show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -104,7 +106,7 @@
                     <p><span class="domain">Culoare:</span> Urban Color</p>
                     <p><span class="domain">Material:</span> Standart</p>
                 </div>
-                <button onclick="cod24(); show5()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod24(); show5()" href class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -118,7 +120,7 @@
                     <p><span class="domain">Culoare:</span> Roșu</p>
                     <p><span class="domain">Material:</span> Piele artificială</p>
                 </div>
-                <button onclick="cod25(); show5()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod25(); show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -133,7 +135,7 @@
                     <p><span class="domain">Material:</span> Piele artificială</p>
                    
                 </div>
-                <button onclick="cod26(); show5()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod26(); show5()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -147,7 +149,7 @@
                     <p><span class="domain">Culoare:</span> Mentă</p>
                     <p><span class="domain">Material:</span> Piele artificială</p>
                 </div>
-                <button onclick="cod27(); show5()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod27(); show5()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div class="gotopbtn hidden">

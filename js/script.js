@@ -1,19 +1,34 @@
-function show1() {
-    let formular = document.getElementById("form1");
-    if (formular.style.display === "") {
-        formular.style.display = "block";
-    } else if (formular.style.display === "none") {
-        formular.style.display = "block";
-    } else {
-        formular.style.display = "none";
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay-toggle');
 
-    }
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal')
+        closeModal(modal)
+    })
+})
+
+function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
 }
-function togglePopup1() {
-    let formular = document.getElementById("form1");
-    if (formular.style.display === "block") {
-    } formular.style.display = "none";
+
+function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
 }
+
+
 
 function cod1() {
     document.getElementById("cod").value = "00019";
@@ -28,24 +43,6 @@ function cod3() {
 
 }
 
-
-
-function show2() {
-    let formular = document.getElementById("form2");
-    if (formular.style.display === "") {
-        formular.style.display = "block";
-    } else if (formular.style.display === "none") {
-        formular.style.display = "block";
-    } else {
-        formular.style.display = "none";
-
-    }
-}
-function togglePopup2() {
-    let formular = document.getElementById("form2");
-    if (formular.style.display === "block") {
-    } formular.style.display = "none";
-}
 function cod4() {
     document.getElementById("cod").value = "00001";
 
@@ -71,24 +68,6 @@ function cod9() {
 
 }
 
-
-
-function show3() {
-    let formular = document.getElementById("form3");
-    if (formular.style.display === "") {
-        formular.style.display = "block";
-    } else if (formular.style.display === "none") {
-        formular.style.display = "block";
-    } else {
-        formular.style.display = "none";
-
-    }
-}
-function togglePopup3() {
-    let formular = document.getElementById("form3");
-    if (formular.style.display === "block") {
-    } formular.style.display = "none";
-}
 function cod10() {
     document.getElementById("cod").value = "00007";
 
@@ -114,25 +93,6 @@ function cod15() {
 
 }
 
-
-
-
-function show4() {
-    let formular = document.getElementById("form4");
-    if (formular.style.display === "") {
-        formular.style.display = "block";
-    } else if (formular.style.display === "none") {
-        formular.style.display = "block";
-    } else {
-        formular.style.display = "none";
-
-    }
-}
-function togglePopup4() {
-    let formular = document.getElementById("form4");
-    if (formular.style.display === "block") {
-    } formular.style.display = "none";
-}
 function cod16() {
     document.getElementById("cod").value = "00013";
 
@@ -158,23 +118,6 @@ function cod21() {
 
 }
 
-
-function show5() {
-    let formular = document.getElementById("form5");
-    if (formular.style.display === "") {
-        formular.style.display = "block";
-    } else if (formular.style.display === "none") {
-        formular.style.display = "block";
-    } else {
-        formular.style.display = "none";
-
-    }
-}
-function togglePopup5() {
-    let formular = document.getElementById("form5");
-    if (formular.style.display === "block") {
-    } formular.style.display = "none";
-}
 function cod22() {
     document.getElementById("cod").value = "00022";
 

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-   
+
     <header>
         <a href="#"><img title="Acasa" class="navlogo" src="./resources/icons/icon.jpg" alt="PudraLogo"></a>
         <input id="nav-toggle" type="checkbox" checked>
@@ -39,9 +39,9 @@
         </label>
     </header>
     <main>
-        <div id="form1" class="form-buy">
-            <div class="overlay" id="overlay-toggle"></div>
-            <div class="close-btn" onclick="togglePopup1()">&times;</div>
+        <div class="modal" id="modal">
+
+            <div data-close-button class="close-btn" onclick="togglePopup1()">&times;</div>
             <form action="https://sheetdb.io/api/v1/4xutf64m6enkb" method="POST" id="formular">
                 <p class="formp">Comandă acum:</p>
                 <fieldset>
@@ -51,8 +51,8 @@
                         placeholder="Nume Prenume" required>
                     <br> <br>
                     <label class="form-text" for="cod">Codul produsului:</label>
-                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text"
-                        value="00000" required readonly>
+                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text" value="00000" required
+                        readonly>
                     <br> <br>
                     <label class="form-text" for="email">Email:</label>
                     <input name="data[Email]" id="email" type="email" placeholder="Email...">
@@ -63,9 +63,12 @@
                     <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
                     <br> <br>
                     <input type="submit" value="Trimite">
+
                 </fieldset>
             </form>
         </div>
+        <div class="overlay" id="overlay-toggle"></div>
+
 
         <div class="bannerIMG1">
             <span>PUDRA</span>
@@ -78,11 +81,13 @@
                 Consilierii noștri vor fi bucuroși să vă ofere sfaturi utile pentru utilizarea produselor de îngrijire
                 naturală. De asemenea, oferim produse terapeutice organice. Sprijinim alegerea în concordanță cu
                 convingerile și nevoile dumneavoastră. </p>
-            <p class=" intro-descr">Rutina ideală cu o selecție de produse formulate fără compromis: calitate înaltă, eficiență, naturalețe
+            <p class=" intro-descr">Rutina ideală cu o selecție de produse formulate fără compromis: calitate înaltă,
+                eficiență, naturalețe
                 înainte de toate. Calitatea componentelor îngrijirii dumneavoastră este esențială pentru eficacitatea,
                 de aceea suntem extrem de pretențioși cu privire la originea și metodele lor de extracție sau
                 transformare. </p>
-            <p class="intro-descr">Suntem fericiți să oferim produse de vârf la prețuri imbatabile. <br>Lumea frumuseții te așteaptă!</p>
+            <p class="intro-descr">Suntem fericiți să oferim produse de vârf la prețuri imbatabile. <br>Lumea frumuseții
+                te așteaptă!</p>
         </div>
         <h1 class="pBantet">Top 3 vânzări produse Coreene:</h1>
         <div class="products-boxes">
@@ -97,7 +102,7 @@
                     <p>Masca de zi cu zi Pure Essence pentru catifelarea si hidratarea pielii Masca hrănitoare care are
                         o foaie groasă de mască care furnizează toți nutrienții pielii.</p>
                 </div>
-                <button onclick="cod1(); show1()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod1(); show1()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -110,7 +115,7 @@
                     <p>Formulat cu un complex Pure Green pentru o curățare blândă, spuma noastră de curățare este
                         îmbogățită cu diferite ingrediente super hrănitoare.</p>
                 </div>
-                <button onclick="cod2(); show1()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod2(); show1()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -123,7 +128,7 @@
                     <p>Îngrijire cu mentă tratează eficient porii. Bulele de mentă oferă o curățare
                         profundă, mentolul îndepărtează pielea moartă. Îndepărtează impuritățile.</p>
                 </div>
-                <button onclick=" cod3(); show1()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick=" cod3(); show1()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div>

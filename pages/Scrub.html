@@ -37,9 +37,9 @@
     </header>
     <main>
        
-        <div id="form3" class="form-buy">
-            <div class="overlay" id="overlay-toggle"></div>
-            <div class="close-btn" onclick="togglePopup3()">&times;</div>
+        <div class="modal" id="modal">
+
+            <div data-close-button class="close-btn" onclick="togglePopup1()">&times;</div>
             <form action="https://sheetdb.io/api/v1/4xutf64m6enkb" method="POST" id="formular">
                 <p class="formp">Comandă acum:</p>
                 <fieldset>
@@ -49,8 +49,8 @@
                         placeholder="Nume Prenume" required>
                     <br> <br>
                     <label class="form-text" for="cod">Codul produsului:</label>
-                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text"
-                        placeholder="00000" required>
+                    <input name="data[Cod]" id="cod" minlength="5" maxlength="5" type="text" value="00000" required
+                        readonly>
                     <br> <br>
                     <label class="form-text" for="email">Email:</label>
                     <input name="data[Email]" id="email" type="email" placeholder="Email...">
@@ -61,9 +61,11 @@
                     <p class="form-text">După completarea acestui formular ve-ți fi contactat în scurt timp</p>
                     <br> <br>
                     <input type="submit" value="Trimite">
+
                 </fieldset>
             </form>
         </div>
+        <div class="overlay" id="overlay-toggle"></div>
 
         <div class="products-boxes">
             <div class="products">
@@ -78,7 +80,7 @@
                         hrănește și stimulează respirația celulară, uleiul de macadamia și vanilia mexicană conferă
                         pielii elasticitate. </p>
                 </div>
-                <button onclick="cod10(); show3()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod10(); show3()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -92,7 +94,7 @@
                         detoxifică. Sâmburele de zmeură arctică curăță porii astfel curățind pielea și
                         dândui o finețe nemaipomenită</p>
                 </div>
-                <button onclick="cod11(); show3()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod11(); show3()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -106,7 +108,7 @@
                         zmeură și vitamine care te fac strălucitor, acest exfoliant strălucitor ajută la exfolierea
                         delicată a petelor întunecate. </p>
                 </div>
-                <button onclick="cod12(); show3()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod12(); show3()" href class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -120,7 +122,7 @@
                         o hraneste si o face mata, semintele de fructul pasiunii curata in profunzime porii, fac pielea
                         matasoasa.</p>
                 </div>
-                <button onclick="cod13(); show3()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod13(); show3()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -134,7 +136,7 @@
                         moale și netedă. Untul de shea întărește și tonifică pielea, făcând-o mai tonifiată și mult mai
                         fină la atingere.</p>
                 </div>
-                <button onclick="cod14(); show3()" class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod14(); show3()" class="btn">Comandă acum</button>
             </div>
             <div class="products">
                 <div>
@@ -148,7 +150,7 @@
                         detoxifică. Extractul de zmeură hidratează și tonifică, saturează cu nutrienți valoroși și
                         îmbogățește pielea cu multe-multe vitamine esențiale pentru aceasta.</p>
                 </div>
-                <button onclick="cod15(); show3()" href class="btn">Comandă acum</button>
+                <button data-modal-target="#modal" onclick="cod15(); show3()" href class="btn">Comandă acum</button>
             </div>
         </div>
         <div class="gotopbtn hidden">
